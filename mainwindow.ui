@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>934</width>
+    <height>638</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion des Clients</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>911</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane { /* The tab widget frame */
+border-top: 2px solid #2a2a2a; 
+border-left: 2px solid #2a2a2a;
+border-right: 2px solid #2a2a2a ; 
+border-bottom: 2px solid #2a2a2a; 
+background: #dcdcdc;
+	
+	
+	/*border-top-color: rgb(0, 0, 0);*/
+
+}
+QTabWidget::tab-bar {
+left: 0px; /* move to the right by 5px */
+}
+QTabBar::tab {
+background: #dcdcdc;
+border: 2px solid #535353;
+border-bottom-color: #535353; 
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+min-width: 80px;
+padding: 8px;
+color: rgb(50, 50, 162);
+	color: rgb(0, 0, 0);
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:selected,QTabBar::tab:hover {
+	
+	
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 127);
+}
+QTabBar::tab:selected {
+border-color: #9B9B9B;
+border-bottom-color: #535353; /* same as pane color */
+color: #dcdcdc;
+font-size:13px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:!selected {
+margin-top: 2px; /* make non-selected tabs look smaller */
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>acceuil</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>521</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane { /* The tab widget frame */
+border-top: 2px solid #2a2a2a; 
+border-left: 2px solid #2a2a2a;
+border-right: 2px solid #2a2a2a ; 
+border-bottom: 2px solid #2a2a2a; 
+background: #dcdcdc;
+	
+	
+	/*border-top-color: rgb(0, 0, 0);*/
+
+}
+QTabWidget::tab-bar {
+left: 0px; /* move to the right by 5px */
+}
+QTabBar::tab {
+background: #dcdcdc;
+border: 2px solid #535353;
+border-bottom-color: #535353; 
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+min-width: 80px;
+padding: 8px;
+color: rgb(50, 50, 162);
+	color: rgb(0, 0, 0);
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:selected,QTabBar::tab:hover {
+	
+	
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 127);
+}
+QTabBar::tab:selected {
+border-color: #9B9B9B;
+border-bottom-color: #535353; /* same as pane color */
+color: #dcdcdc;
+font-size:13px;
+font-family:Arial, Helvetica, sans-serif;
+}
+QTabBar::tab:!selected {
+margin-top: 2px; /* make non-selected tabs look smaller */
+}</string>
+      </property>
+      <property name="title">
+       <string>Personnel</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>nom</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>prenom</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>110</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>cin</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>150</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>age</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>190</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>salaire</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_nom">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>40</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_prenom">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>70</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_cin">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>110</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_age">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>150</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_salaire">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>190</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inserer_photo">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>30</y>
+         <width>113</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>170</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>inserer photo</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>-60</x>
+        <y>-100</y>
+        <width>1101</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Arierre plan.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_ajouter">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>380</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>ajouter</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_modifier">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>380</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>modifier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_supprimer">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>380</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_trier">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>80</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>trier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_afficher_historique">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>150</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>afficher historique</string>
+      </property>
+     </widget>
+     <zorder>label_6</zorder>
+     <zorder>groupBox</zorder>
+     <zorder>pb_ajouter</zorder>
+     <zorder>pb_modifier</zorder>
+     <zorder>pb_supprimer</zorder>
+     <zorder>pb_trier</zorder>
+     <zorder>pb_afficher_historique</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>chat</string>
+     </attribute>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>-80</x>
+        <y>-40</y>
+        <width>1001</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Arierre plan.jpg</pixmap>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>afficher</string>
+     </attribute>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>-40</x>
+        <y>-40</y>
+        <width>1001</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../Arierre plan.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tab_personnel">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>50</y>
+        <width>771</width>
+        <height>331</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>934</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
