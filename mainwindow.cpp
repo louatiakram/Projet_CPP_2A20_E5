@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
      ui->le_id->setValidator( new QIntValidator(0, 9999, this));
      ui->le_age->setValidator( new QIntValidator(0, 9999, this));
      ui->tab_animal->setModel(A.afficher());
+     ui->table_id->setModel(A.afficher_id());
 }
 
 MainWindow::~MainWindow()
@@ -35,6 +36,7 @@ void MainWindow::on_pb_ajouter_clicked()
          QMessageBox::information(nullptr, QObject::tr("Ok"),
               QObject::tr("Ajout effectué.\n"
                           "Click Cancel to exit."), QMessageBox::Cancel);
+         ui->table_id->setModel(A.afficher_id());
     ui->tab_animal->setModel(A.afficher());
 
      }
@@ -52,12 +54,13 @@ void MainWindow::on_pb_afficher_clicked()
 {
 
 }
-
 void MainWindow::on_pb_supprimer_clicked()
 {
     Animaux A;
-    A.setid(ui->le_id->text().toInt());
+    A.setid(ui->table_id->currentText().toInt());
     bool test=A.supprimer(A.getid());
+
+
     if(test)
     {
         ui->tab_animal->setModel(A.afficher());
@@ -67,6 +70,7 @@ void MainWindow::on_pb_supprimer_clicked()
                          "Click Cancel to exit."), QMessageBox::Cancel);
 
    ui->tab_animal->setModel(A.afficher());
+   ui->table_id->setModel(A.afficher_id());
     }
     else
     {
@@ -77,5 +81,40 @@ void MainWindow::on_pb_supprimer_clicked()
 
     }
 }
+
+
+
+void MainWindow::on_modifier_clicked()
+{
+    int id_animal=ui->table_id->currentText().toInt();
+    QString nom=ui->le_nom->text();
+    QString race=ui->la_race->text();
+    int age=ui->le_age->text().toInt();
+    QString date_entree=ui->la_date->text();
+    QString emplacement=ui->le_emplacement->text();
+    Animaux A(id_animal,nom,race,age,date_entree,emplacement);
+
+    bool test=A.modifier();
+
+     if(test)
+     {
+
+         QMessageBox::information(nullptr, QObject::tr("Ok"),
+              QObject::tr("Modification effectué.\n"
+                          "Click Cancel to exit."), QMessageBox::Cancel);
+    ui->tab_animal->setModel(A.afficher());
+    ui->table_id->setModel(A.afficher_id());
+
+     }
+     else
+     {
+         QMessageBox::critical(nullptr, QObject::tr("Not Ok"),
+              QObject::tr("Modification non effectué.\n"
+                          "Click Cancel to exit."), QMessageBox::Cancel);
+
+
+     }
+}
+
 
 

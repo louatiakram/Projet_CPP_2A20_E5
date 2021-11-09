@@ -25,6 +25,16 @@ private slots:
 
     void on_Animaux_currentChanged(int index);
 
+    void on_modifier_clicked();
+
+    void on_comboBox_activated(int index);
+
+    void on_table_id_activated(const QString &arg1);
+
+    void on_table_id_activated(int index);
+
+    void on_table_id_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     Animaux A;

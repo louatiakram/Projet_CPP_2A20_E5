@@ -6,6 +6,7 @@
 
 QT       += core gui
 QT       += sql
+QT       += core gui multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,12 +30,14 @@ SOURCES += \
     gestion_animaux.cpp \
         main.cpp \
         mainwindow.cpp \
-    connection.cpp
+    connection.cpp \
+    photo.cpp
 
 HEADERS += \
     gestion_animaux.h \
         mainwindow.h \
-    connection.h
+    connection.h \
+    photo.h
 
 FORMS += \
         mainwindow.ui
@@ -43,3 +46,4 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+QMAKE_CXXFLAGS += -std=gnu++14

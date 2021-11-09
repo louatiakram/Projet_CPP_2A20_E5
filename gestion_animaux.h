@@ -37,6 +37,7 @@ public:
    bool modifier();
    bool supprimer(int);
    QSqlQueryModel* afficher();
+   QSqlQueryModel* afficher_id();
 
 };
 

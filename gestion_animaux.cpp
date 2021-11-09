@@ -116,3 +116,39 @@ Animaux::Animaux(int id_animal ,QString nom ,QString race,int age,QString date_e
 
               return  model;
     }
+    bool Animaux::modifier()
+    {
+
+
+
+
+        QSqlQuery query;
+            query.prepare("UPDATE GESTION_ANIMAUX SET nom=:nom, race=:race, age=:age, date_entree=:date_entree, emplacement=:emplacement WHERE id_animal=:id ");
+            query.bindValue(":nom", nom);
+            query.bindValue(":race", race);
+            query.bindValue(":age", age);
+            query.bindValue(":date_entree", date_entree);
+            query.bindValue(":emplacement", emplacement);
+
+            query.bindValue(":id", id_animal);
+
+
+
+
+
+
+             return query.exec();
+
+
+
+
+    }
+   QSqlQueryModel* Animaux ::afficher_id()
+   {
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("select id_animal from GESTION_ANIMAUX");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("id_animal"));
+    return model;
+
+   }
+

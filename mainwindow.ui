@@ -601,6 +601,16 @@ border: none;
        <pixmap>../background anim.jpg</pixmap>
       </property>
      </widget>
+     <widget class="QComboBox" name="table_id">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>410</y>
+        <width>73</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
      <zorder>label_13</zorder>
      <zorder>label_10</zorder>
      <zorder>groupBox</zorder>
@@ -610,6 +620,7 @@ border: none;
      <zorder>pb_ajouter</zorder>
      <zorder>ImportPDF</zorder>
      <zorder>trier</zorder>
+     <zorder>table_id</zorder>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
