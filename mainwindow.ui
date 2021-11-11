@@ -606,9 +606,26 @@ border: none;
        <rect>
         <x>490</x>
         <y>410</y>
-        <width>73</width>
+        <width>101</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
       </property>
      </widget>
      <zorder>label_13</zorder>
