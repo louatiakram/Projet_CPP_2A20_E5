@@ -19,20 +19,29 @@ GestionDesProduits::GestionDesProduits(QWidget *parent) :
     ui(new Ui::GestionDesProduits)
 {
     ui->setupUi(this);
+#define NOM_RX "^([a-z]+[,.]?[ ]?|[a-z]+['-]?)+$"
+    QRegExp rxNom(NOM_RX);
+    QRegExpValidator*valiNom= new QRegExpValidator(rxNom,this);
+
+#define PRIX_RX "^([0-9]+[,.]?[ ]?|[0-9]+['-]?)+$"
+    QRegExp rxPrix(PRIX_RX);
+    QRegExpValidator*valiPrix= new QRegExpValidator(rxPrix,this);
 
     QPixmap pix("C:/Users/ASUS/Desktop/Gestion Des Produits/F.jpg");
     ui->IMG->setPixmap(pix.scaled(1200,700,Qt::KeepAspectRatio));
 
     ui->lineEdit_01->setValidator(new QIntValidator(0,999999,this));
-    //ui->lineEdit_03->setValidator(new QDoubleValidator());
+    ui->lineEdit_02->setValidator(valiNom);
+    ui->lineEdit_03->setValidator(valiPrix);
     ui->lineEdit_04->setValidator(new QIntValidator(0,999999,this));
-
-    //ui->lineEdit_06->setValidator(new QDoubleValidator());
+    ui->lineEdit_05->setValidator(valiNom);
+    ui->lineEdit_06->setValidator(valiPrix);
     ui->lineEdit_07->setValidator(new QIntValidator(0,999999,this));
 
     ui->tableView->setModel(G.afficher());
     ui->comboBox_01->setModel(G.afficher());
     ui->comboBox_02->setModel(G.afficher());
+
     GDP G;
 }
 
