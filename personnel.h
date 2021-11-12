@@ -10,34 +10,40 @@ class Personnel
 public:
 
     Personnel();
-    Personnel(int,QString,QString,int,double);
+    Personnel(int,QString,QString,int,int,int,int);
 
 
+    int getcin();
     QString getnom();
     QString getprenom();
     int getage();
-    int getcin();
-    double getsalaire();
+    int getsalaire();
+    int getnumero_tel();
 
 
+    void setcin(int);
     void setnom(QString);
     void setprenom(QString);
     void setage(int);
-    void setcin(int);
-    void setsalaire(float);
+    void setsalaire(int);
+    void setnumero_tel(int);
+
 
     bool ajouter();
-    bool modifier();
+    bool modifierP();
     bool supprimer(int);
     QSqlQueryModel* afficher();
 
 
+
 private:
-    QString nom;
-    QString prenom;
-    int age;
-    int cin;
-    double salaire;
+    int CIN;
+    QString NOM;
+    QString PRENOM;
+    int AGE;
+    int SALAIRE;
+    int NUM_TEL;
+    int CIN_DIRIGEUR;
 
 
 

@@ -3,7 +3,7 @@
 #include"personnel.h"
 #include<QIntValidator>
 #include<QMessageBox>
-#include<QDoubleValidator>
+
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -11,10 +11,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->le_cin->setValidator( new QIntValidator(0, 9999, this));
-    ui->le_age->setValidator( new QIntValidator(0, 9999, this));
-    ui->le_salaire->setValidator( new QDoubleValidator(0.00,99999.00,5, this));
+    ui->le_cin->setValidator( new QIntValidator(0, 99999999, this));
+    ui->le_age->setValidator( new QIntValidator(0, 99, this));
+    ui->le_salaire->setValidator( new QIntValidator(0,999999, this));
+    ui->le_numero->setValidator( new QIntValidator(0, 99999999, this));
     ui->tab_personnel->setModel (P.afficher());
+
 }
 
 MainWindow::~MainWindow()
@@ -24,13 +26,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pb_ajouter_clicked()
 {
-    int cin=ui->le_cin->text().toInt();
-    QString nom=ui->le_nom->text();
-    QString prenom=ui->le_prenom->text();
-    int age=ui->le_age->text().toInt();
-    double salaire=ui->le_salaire->text().toDouble();
-
-    Personnel P(cin,nom,prenom,age,salaire);
+    int CIN=ui->le_cin->text().toInt();
+    QString NOM=ui->le_nom->text();
+    QString PRENOM=ui->le_prenom->text();
+    int AGE=ui->le_age->text().toInt();
+    int SALAIRE=ui->le_salaire->text().toInt();
+    int NUM_TEL=ui->le_numero->text().toInt();
+    int CIN_DIRIGEUR;
+    Personnel P(CIN,NOM,PRENOM,AGE,SALAIRE,NUM_TEL,CIN_DIRIGEUR);
 
     bool test=P.ajouter();
 
@@ -57,6 +60,7 @@ void MainWindow::on_pb_ajouter_clicked()
 void MainWindow::on_pb_afficher_clicked()
 {
 
+
 }
 
 
@@ -71,6 +75,7 @@ void MainWindow::on_pb_supprimer_clicked()
              QObject::tr("Suppression effectué.\n"
                          "Click Cancel to exit."), QMessageBox::Cancel);
 
+
    ui->tab_personnel->setModel(P.afficher());
     }
     else
@@ -83,4 +88,34 @@ void MainWindow::on_pb_supprimer_clicked()
     }
 }
 
+void MainWindow::on_pb_modifier_clicked()
+{
+    int CIN=ui->le_cin->text().toInt();
+    QString NOM=ui->le_nom->text();
+    QString PRENOM=ui->le_prenom->text();
+    int AGE=ui->le_age->text().toInt();
+    int SALAIRE=ui->le_salaire->text().toInt();
+    int NUM_TEL=ui->le_numero->text().toInt();
+    int CIN_DIRIGEUR;
+    Personnel P(CIN,NOM,PRENOM,AGE,SALAIRE,NUM_TEL,CIN_DIRIGEUR);
 
+    bool test=P.modifierP();
+
+     if(test)
+     {
+
+         QMessageBox::information(nullptr, QObject::tr("Ok"),
+              QObject::tr("Modification effectué.\n"
+                          "Click Cancel to exit."), QMessageBox::Cancel);
+    ui->tab_personnel->setModel(P.afficher());
+
+     }
+     else
+     {
+         QMessageBox::critical(nullptr, QObject::tr("Not Ok"),
+              QObject::tr("Modification non effectué.\n"
+                          "Click Cancel to exit."), QMessageBox::Cancel);
+
+
+     }
+}
