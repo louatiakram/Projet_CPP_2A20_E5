@@ -3,10 +3,6 @@
 #include "gestiondesproduits.h"
 #include "gdp.h"
 
-#include <QPixmap>
-#include<QIntValidator>
-#include<QMessageBox>
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)

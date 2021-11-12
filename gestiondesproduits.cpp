@@ -4,16 +4,6 @@
 #include "ui_gestiondesproduits.h"
 #include "gdp.h"
 
-#include <QTabWidget>
-#include <QTableWidgetItem>
-#include <QTabWidget>
-#include <QSqlQuery>
-#include <QtDebug>
-#include <QIntValidator>
-#include <QDoubleValidator>
-#include <QMessageBox>
-#include <QDate>
-
 GestionDesProduits::GestionDesProduits(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::GestionDesProduits)

@@ -5,6 +5,13 @@
 #include<QSqlQuery>
 #include<QSqlQueryModel>
 #include <QDialog>
+#include <QTabWidget>
+#include <QTableWidgetItem>
+#include <QTabWidget>
+#include <QtDebug>
+#include <QIntValidator>
+#include <QMessageBox>
+#include <QDate>
 
 #include "gdp.h"
 

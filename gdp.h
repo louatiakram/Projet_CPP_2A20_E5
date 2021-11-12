@@ -6,6 +6,10 @@
 #include<QSqlQueryModel>
 #include <QDialog>
 #include <QDate>
+#include <QtDebug>
+#include <QIntValidator>
+#include <QMessageBox>
+#include <QObject>
 
 class GDP
 {

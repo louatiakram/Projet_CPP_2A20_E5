@@ -1,12 +1,5 @@
 #include "gdp.h"
 
-#include <QSqlQuery>
-#include <QtDebug>
-#include <QIntValidator>
-#include <QMessageBox>
-#include <QDate>
-#include <QObject>
-
 GDP::GDP()
 {
     ID_PRODUIT=0; NOM_PRODUIT=""; DATE_PRODUCTION={0,0,0}; DATE_EXPIRATION={0,0,0}; PRIX=0.0; QUANTITE=0;
