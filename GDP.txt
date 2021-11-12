@@ -1,0 +1,11 @@
+*** Tache: Gestion Produit ***
+
+Fonction:
+Ajouter(Id_produit, Nom_produit, Date_P, Date_E, Qte_produit, Prix) =>[Inserer_Image]
+Afficher =>[Imprimer_pdf, Chercher, Trier]
+Modifier
+Supprimer
+Statistiques
+Quitter
+
+
