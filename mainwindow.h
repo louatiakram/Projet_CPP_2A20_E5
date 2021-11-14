@@ -73,6 +73,8 @@ private slots:
 
     void on_Lienderenseignement_9_clicked();
 
+    void on_ImportPDF_clicked();
+
 private:
     Ui::MainWindow *ui;
     Animaux A;
