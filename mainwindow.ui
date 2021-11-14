@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1221</width>
-    <height>635</height>
+    <width>967</width>
+    <height>693</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -69,7 +69,7 @@ margin-top: 2px; /* make non-selected tabs look smaller */
 }</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -338,7 +338,7 @@ border: none;
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_age_5">
+      <widget class="QLineEdit" name="insert_photo">
        <property name="geometry">
         <rect>
          <x>380</x>
@@ -393,35 +393,6 @@ border: none;
         <bool>false</bool>
        </property>
       </widget>
-     </widget>
-     <widget class="QPushButton" name="Lienderenseignement">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>210</y>
-        <width>151</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-color: #dcdcdc;
-background:#535353;
-border: none;
-font-size:12px;
-font-family:Arial, Helvetica, sans-serif;
-border: 2px solid ;
-border-radius: 8px;
-}
-QPushButton:hover {
-color:#fff;
-	background-color: rgb(0, 0, 127);
-border: none;
-}</string>
-      </property>
-      <property name="text">
-       <string>Lien de renseignement</string>
-      </property>
      </widget>
      <widget class="QPushButton" name="pb_supprimer">
       <property name="geometry">
@@ -540,35 +511,6 @@ border: none;
        <string>Import PDF</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="trier">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>50</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-color: #dcdcdc;
-background:#535353;
-border: none;
-font-size:12px;
-font-family:Arial, Helvetica, sans-serif;
-border: 2px solid ;
-border-radius: 8px;
-}
-QPushButton:hover {
-color:#fff;
-	background-color: rgb(0, 0, 127);
-border: none;
-}</string>
-      </property>
-      <property name="text">
-       <string>trier</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
@@ -628,198 +570,36 @@ border: none;
 </string>
       </property>
      </widget>
-     <zorder>label_13</zorder>
-     <zorder>label_10</zorder>
-     <zorder>groupBox</zorder>
-     <zorder>Lienderenseignement</zorder>
-     <zorder>pb_supprimer</zorder>
-     <zorder>modifier</zorder>
-     <zorder>pb_ajouter</zorder>
-     <zorder>ImportPDF</zorder>
-     <zorder>trier</zorder>
-     <zorder>table_id</zorder>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Mailing</string>
-     </attribute>
-     <widget class="QPushButton" name="mailing">
+     <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>370</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-color: #dcdcdc;
-background:#535353;
-border: none;
-font-size:12px;
-font-family:Arial, Helvetica, sans-serif;
-border: 2px solid ;
-border-radius: 8px;
-}
-QPushButton:hover {
-color:#fff;
-	background-color: rgb(0, 0, 127);
-border: none;
-}</string>
-      </property>
-      <property name="text">
-       <string>mailing</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_7">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>50</y>
-        <width>81</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel {
-color: #000000;
-background:#FFC0CB;
-border: none;
-font-size:12px;
-font-family:Arial, Helvetica, sans-serif;
-border: 2px solid ;
-border-radius: 8px;
-}
-QPushButton:hover {
-color:#FFC0CB;
-background-color: rgb(0rgb(0, 255, 0), 0, 127);
-border: none;
-}
-</string>
-      </property>
-      <property name="text">
-       <string>DEStINAIRE</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_8">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>210</y>
-        <width>81</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel {
-color: #000000;
-background:#FFC0CB;
-border: none;
-font-size:12px;
-font-family:Arial, Helvetica, sans-serif;
-border: 2px solid ;
-border-radius: 8px;
-}
-QPushButton:hover {
-color:#FFC0CB;
-background-color: rgb(0rgb(0, 255, 0), 0, 127);
-border: none;
-}
-</string>
-      </property>
-      <property name="text">
-       <string> MAIL</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_9">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>130</y>
-        <width>81</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLabel {
-color: #000000;
-background:#FFC0CB;
-border: none;
-font-size:12px;
-font-family:Arial, Helvetica, sans-serif;
-border: 2px solid ;
-border-radius: 8px;
-}
-QPushButton:hover {
-color:#FFC0CB;
-background-color: rgb(0rgb(0, 255, 0), 0, 127);
-border: none;
-}
-</string>
-      </property>
-      <property name="text">
-       <string>OBJET</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_age_6">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>50</y>
-        <width>261</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="readOnly">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_age_7">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>130</y>
-        <width>261</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="readOnly">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_age_8">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>210</y>
-        <width>251</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="readOnly">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_14">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>841</width>
-        <height>491</height>
+        <x>-5</x>
+        <y>-5</y>
+        <width>941</width>
+        <height>591</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../background anim.jpg</pixmap>
+       <pixmap>background anim.jpg</pixmap>
       </property>
      </widget>
+     <zorder>label_11</zorder>
+     <zorder>label_13</zorder>
+     <zorder>label_10</zorder>
+     <zorder>groupBox</zorder>
+     <zorder>pb_supprimer</zorder>
+     <zorder>modifier</zorder>
+     <zorder>pb_ajouter</zorder>
+     <zorder>ImportPDF</zorder>
+     <zorder>table_id</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Mailing</string>
+     </attribute>
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
@@ -836,15 +616,19 @@ border: none;
        <pixmap>../background anim.jpg</pixmap>
       </property>
      </widget>
-     <zorder>label_14</zorder>
-     <zorder>label_15</zorder>
-     <zorder>mailing</zorder>
-     <zorder>label_7</zorder>
-     <zorder>label_8</zorder>
-     <zorder>label_9</zorder>
-     <zorder>lineEdit_age_6</zorder>
-     <zorder>lineEdit_age_7</zorder>
-     <zorder>lineEdit_age_8</zorder>
+     <widget class="QPushButton" name="sendBtn">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>390</y>
+        <width>131</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Envoyer</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -892,9 +676,657 @@ border: none;
        <pixmap>../background anim.jpg</pixmap>
       </property>
      </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>-5</x>
+        <y>-15</y>
+        <width>991</width>
+        <height>751</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>background anim.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="trier_id">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>430</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>trier id</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="trier_nom">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>430</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>trier nom</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="trier_age">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>430</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>trier age</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_rechercher">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>430</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>430</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <zorder>label_17</zorder>
      <zorder>label_16</zorder>
      <zorder>label_12</zorder>
      <zorder>tab_animal</zorder>
+     <zorder>trier_id</zorder>
+     <zorder>trier_nom</zorder>
+     <zorder>trier_age</zorder>
+     <zorder>le_rechercher</zorder>
+     <zorder>label_23</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Lien de renseignement</string>
+     </attribute>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>-30</x>
+        <y>480</y>
+        <width>1501</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../background anim.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>-130</y>
+        <width>1591</width>
+        <height>781</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../background anim.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>-80</x>
+        <y>0</y>
+        <width>941</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../background anim.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_4">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>80</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR LES CHATS CLIQUEZ ICI -----------&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_10">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>40</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR LES CHIENS CLIQUEZ ICI -----------&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_2">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>40</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>chien</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_8">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>panda</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_7">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>160</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>dophin</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_6">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>200</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>penguin</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_5">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>chat</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>240</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>focs</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_3">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>290</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>tiger</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_10">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>370</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>lion</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_11">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>330</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>autruche</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Lienderenseignement_12">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>410</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>girafes</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_12">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>120</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR PANDA CLIQUEZ ICI        -----------&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_13">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>160</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR LES DOPHIN CLIQUEZ ICI -----------&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_17">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>200</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR LES PENGUINS CLIQUEZ ICI  -------&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_14">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>240</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR LES FOCS CLIQUEZ ICI -----------&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_16">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>290</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR LES TIGERS C CLIQUEZ ICI -----------&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_15">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>330</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR LES AUTRUCHES CLIQUEZ ICI -----------&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_18">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>410</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR LES GIRAFES CLIQUEZ ICI -----------&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="uname_19">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>370</y>
+        <width>421</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>POUR PLUS D'INFORMATION SUR LES LIONS CLIQUEZ ICI -----------&gt;</string>
+      </property>
+     </widget>
+     <zorder>label_20</zorder>
+     <zorder>label_22</zorder>
+     <zorder>label_21</zorder>
+     <zorder>uname_4</zorder>
+     <zorder>uname_10</zorder>
+     <zorder>Lienderenseignement_2</zorder>
+     <zorder>Lienderenseignement_8</zorder>
+     <zorder>Lienderenseignement_7</zorder>
+     <zorder>Lienderenseignement_6</zorder>
+     <zorder>Lienderenseignement_5</zorder>
+     <zorder>Lienderenseignement_4</zorder>
+     <zorder>Lienderenseignement_3</zorder>
+     <zorder>Lienderenseignement_10</zorder>
+     <zorder>Lienderenseignement_11</zorder>
+     <zorder>Lienderenseignement_12</zorder>
+     <zorder>uname_12</zorder>
+     <zorder>uname_13</zorder>
+     <zorder>uname_17</zorder>
+     <zorder>uname_14</zorder>
+     <zorder>uname_16</zorder>
+     <zorder>uname_15</zorder>
+     <zorder>uname_18</zorder>
+     <zorder>uname_19</zorder>
     </widget>
    </widget>
   </widget>
@@ -912,7 +1344,7 @@ border: none;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1221</width>
+     <width>967</width>
      <height>26</height>
     </rect>
    </property>

@@ -3,6 +3,8 @@
 #include"gestion_animaux.h"
 #include<QIntValidator>
 #include<QMessageBox>
+#include<QDesktopServices>
+#include<QUrl>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -118,3 +120,106 @@ void MainWindow::on_modifier_clicked()
 
 
 
+
+void MainWindow::on_trier_id_clicked()
+{
+    QMessageBox::information(nullptr, QObject::tr("Ok"),
+         QObject::tr("tri effectué.\n"
+                     "Click Cancel to exit."), QMessageBox::Cancel);
+ ui->tab_animal->setModel(A.tri_id());
+
+}
+
+
+void MainWindow::on_trier_age_clicked()
+{
+    QMessageBox::information(nullptr, QObject::tr("Ok"),
+         QObject::tr("tri effectué.\n"
+                     "Click Cancel to exit."), QMessageBox::Cancel);
+ ui->tab_animal->setModel(A.tri_age());
+}
+
+void MainWindow::on_trier_nom_clicked()
+{
+    QMessageBox::information(nullptr, QObject::tr("Ok"),
+         QObject::tr("tri effectué.\n"
+                     "Click Cancel to exit."), QMessageBox::Cancel);
+ ui->tab_animal->setModel(A.tri_nom());
+}
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+
+void MainWindow::on_le_rechercher_textChanged()
+{
+    A.clearTable(ui->tab_animal);
+        int id_animal=ui->le_rechercher->text().toInt();
+        A.rechercher(ui->tab_animal,id_animal);
+}
+
+
+
+
+
+
+
+
+void MainWindow::on_Lienderenseignement_2_clicked()
+{
+
+    QDesktopServices::openUrl(QUrl("https://animalzone.tn/11-chiens"));
+}
+
+void MainWindow::on_Lienderenseignement_5_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://animalzone.tn/10-chats"));
+}
+
+void MainWindow::on_Lienderenseignement_8_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://kids.nationalgeographic.com/animals/mammals/facts/giant-panda"));
+}
+
+void MainWindow::on_Lienderenseignement_7_clicked()
+{
+     QDesktopServices::openUrl(QUrl("https://kids.nationalgeographic.com/animals/mammals/facts/bottlenose-dolphin"));
+}
+
+void MainWindow::on_Lienderenseignement_6_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://kids.nationalgeographic.com/animals/birds/facts/adelie-penguin"));
+}
+
+void MainWindow::on_Lienderenseignement_4_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://kids.nationalgeographic.com/animals/mammals/facts/harp-seal"));
+}
+
+void MainWindow::on_Lienderenseignement_3_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://kids.nationalgeographic.com/animals/mammals/facts/tiger"));
+}
+
+void MainWindow::on_Lienderenseignement_11_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://kids.nationalgeographic.com/animals/birds/facts/ostrich"));
+}
+
+void MainWindow::on_Lienderenseignement_10_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://kids.nationalgeographic.com/animals/mammals/facts/lion"));
+}
+
+void MainWindow::on_Lienderenseignement_12_clicked()
+{
+   QDesktopServices::openUrl(QUrl("https://kids.nationalgeographic.com/animals/mammals/facts/giraffe"));
+}
+
+void MainWindow::on_Lienderenseignement_9_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://kids.nationalgeographic.com/animals/mammals/facts/giraffe"));
+}

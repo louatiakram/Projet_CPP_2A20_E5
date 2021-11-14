@@ -152,3 +152,62 @@ Animaux::Animaux(int id_animal ,QString nom ,QString race,int age,QString date_e
 
    }
 
+   QSqlQueryModel * Animaux::tri_id()
+   {QSqlQueryModel * model= new QSqlQueryModel();
+
+   model->setQuery("select * from GESTION_ANIMAUX order by id_animal");
+   model->setHeaderData(0, Qt::Horizontal,QObject::tr("id_animal"));
+   model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+   model->setHeaderData(2, Qt::Horizontal, QObject::tr("race"));
+   model->setHeaderData(3, Qt::Horizontal, QObject::tr("age"));
+   model->setHeaderData(4, Qt::Horizontal, QObject::tr("date_entree"));
+   model->setHeaderData(5, Qt::Horizontal, QObject::tr("emplacement"));
+       return model;
+   }
+   QSqlQueryModel * Animaux::tri_age()
+   {QSqlQueryModel * model= new QSqlQueryModel();
+
+   model->setQuery("select * from GESTION_ANIMAUX order by age");
+   model->setHeaderData(0, Qt::Horizontal,QObject::tr("id_animal"));
+   model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+   model->setHeaderData(2, Qt::Horizontal, QObject::tr("race"));
+   model->setHeaderData(3, Qt::Horizontal, QObject::tr("age"));
+   model->setHeaderData(4, Qt::Horizontal, QObject::tr("date_entree"));
+   model->setHeaderData(5, Qt::Horizontal, QObject::tr("emplacement"));
+       return model;
+   }
+   QSqlQueryModel * Animaux::tri_nom()
+   {QSqlQueryModel * model= new QSqlQueryModel();
+
+   model->setQuery("select * from GESTION_ANIMAUX order by nom");
+   model->setHeaderData(0, Qt::Horizontal,QObject::tr("id_animal"));
+   model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+   model->setHeaderData(2, Qt::Horizontal, QObject::tr("race"));
+   model->setHeaderData(3, Qt::Horizontal, QObject::tr("age"));
+   model->setHeaderData(4, Qt::Horizontal, QObject::tr("date_entree"));
+   model->setHeaderData(5, Qt::Horizontal, QObject::tr("emplacement"));
+       return model;
+   }
+   void Animaux::clearTable(QTableView *table)
+   {
+       QSqlQueryModel *model=new QSqlQueryModel();
+       model->clear();
+       table->setModel(model);
+   }
+
+   void Animaux::rechercher(QTableView *table, int x)
+   {
+      QSqlQueryModel *model=new QSqlQueryModel();
+      QSqlQuery *query =new QSqlQuery;
+      query->prepare("select * from GESTION_ANIMAUX where regexp_like(id_animal,:id_animal);");
+      query->bindValue(":id_animal",x);
+
+      if(x==0)
+      {
+          query->prepare("select * from GESTION_ANIMAUX;");
+      }
+      query->exec();
+      model->setQuery(*query);
+      table->setModel(model);
+      table->show();
+   }

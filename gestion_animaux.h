@@ -3,6 +3,7 @@
 #include<QString>
 #include<QSqlQuery>
 #include<QSqlQueryModel>
+#include<QTableView>
 
 using namespace std;
 class Animaux
@@ -38,6 +39,13 @@ public:
    bool supprimer(int);
    QSqlQueryModel* afficher();
    QSqlQueryModel* afficher_id();
+    QSqlQueryModel* tri_id();
+    QSqlQueryModel* tri_age();
+    QSqlQueryModel* tri_nom();
+    void clearTable(QTableView * table);
+       void rechercher(QTableView *table, int x);
+
+
 
 };
 
