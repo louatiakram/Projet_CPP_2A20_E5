@@ -338,25 +338,12 @@ border: none;
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QLineEdit" name="insert_photo">
-       <property name="geometry">
-        <rect>
-         <x>380</x>
-         <y>20</y>
-         <width>113</width>
-         <height>121</height>
-        </rect>
-       </property>
-       <property name="readOnly">
-        <bool>false</bool>
-       </property>
-      </widget>
       <widget class="QPushButton" name="insererphoto">
        <property name="geometry">
         <rect>
-         <x>390</x>
-         <y>160</y>
-         <width>93</width>
+         <x>372</x>
+         <y>240</y>
+         <width>111</width>
          <height>28</height>
         </rect>
        </property>
@@ -391,6 +378,19 @@ border: none;
        </property>
        <property name="readOnly">
         <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_image">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>50</y>
+         <width>141</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>

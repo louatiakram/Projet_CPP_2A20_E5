@@ -10,6 +10,8 @@
 #include <QtPrintSupport/QPrintDialog>
 #include <QtPrintSupport/QPrinter>
 #include <QtWidgets>
+#include<QFileDialog>
+
 
 
 
@@ -296,4 +298,26 @@ void MainWindow::on_ImportPDF_clicked()
          {
              return;
          }
+}
+
+
+
+
+void MainWindow::on_insererphoto_clicked()
+{
+   QString filename = QFileDialog::getSaveFileName(this,tr("choose"),"",tr("Image(*.png *.jpeg *.jpg *.bmp *.gif)"));
+   if (QString::compare(filename,QString()) !=0)
+   {
+       QImage image;
+       bool valid = image.load(filename);
+       if(valid)
+       {
+           image=image.scaledToWidth(ui->lbl_image->width(), Qt::SmoothTransformation);
+                   ui->lbl_image->setPixmap(QPixmap::fromImage(image));
+       }
+       else
+       {
+           //ERROR HANDLING
+       }
+   }
 }

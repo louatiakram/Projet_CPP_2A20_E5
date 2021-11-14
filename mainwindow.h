@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+
 #include"gestion_animaux.h"
 namespace Ui {
 class MainWindow;
@@ -74,6 +75,8 @@ private slots:
     void on_Lienderenseignement_9_clicked();
 
     void on_ImportPDF_clicked();
+
+    void on_insererphoto_clicked();
 
 private:
     Ui::MainWindow *ui;
