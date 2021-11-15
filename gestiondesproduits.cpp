@@ -1,5 +1,3 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
 #include "gestiondesproduits.h"
 #include "ui_gestiondesproduits.h"
 #include "gdp.h"
@@ -17,7 +15,7 @@ GestionDesProduits::GestionDesProduits(QWidget *parent) :
     QRegExp rxPrix(PRIX_RX);
     QRegExpValidator*valiPrix= new QRegExpValidator(rxPrix,this);
 
-    QPixmap pix("C:/Users/ASUS/Desktop/Gestion Des Produits/F.jpg");
+    QPixmap pix("C:/Users/ASUS/Desktop/2021-2022/Projects/Projet_CPP_2A20_E5/F.jpg");
     ui->IMG->setPixmap(pix.scaled(1200,700,Qt::KeepAspectRatio));
 
     ui->lineEdit_01->setValidator(new QIntValidator(0,999999,this));

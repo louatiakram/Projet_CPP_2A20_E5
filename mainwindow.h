@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 #include <QMainWindow>
 #include <QPixmap>
-#include<QIntValidator>
-#include<QMessageBox>
+#include <QIntValidator>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

@@ -1,9 +1,9 @@
 #ifndef GDP_H
 #define GDP_H
 #include <QPixmap>
-#include<QString>
-#include<QSqlQuery>
-#include<QSqlQueryModel>
+#include <QString>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 #include <QDialog>
 #include <QDate>
 #include <QtDebug>

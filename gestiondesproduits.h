@@ -1,9 +1,9 @@
 #ifndef GESTIONDESPRODUITS_H
 #define GESTIONDESPRODUITS_H
 #include <QPixmap>
-#include<QString>
-#include<QSqlQuery>
-#include<QSqlQueryModel>
+#include <QString>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 #include <QDialog>
 #include <QTabWidget>
 #include <QTableWidgetItem>
