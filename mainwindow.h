@@ -80,7 +80,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
     Animaux A;
+
 };
 
 #endif // MAINWINDOW_H

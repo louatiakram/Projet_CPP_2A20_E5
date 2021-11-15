@@ -14,7 +14,6 @@
 
 
 
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -24,6 +23,11 @@ MainWindow::MainWindow(QWidget *parent) :
      ui->le_age->setValidator( new QIntValidator(0, 9999, this));
      ui->tab_animal->setModel(A.afficher());
      ui->table_id->setModel(A.afficher_id());
+
+     /////////////////
+
+         connect(ui->exitBtn, SIGNAL(clicked()),this, SLOT(close()));
+     /////////////
 }
 
 MainWindow::~MainWindow()
@@ -321,3 +325,12 @@ void MainWindow::on_insererphoto_clicked()
        }
    }
 }
+
+
+//////////////////////////////////////////
+
+
+/////////////////////////////////////////
+
+
+
