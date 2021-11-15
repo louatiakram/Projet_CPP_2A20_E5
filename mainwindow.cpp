@@ -11,7 +11,7 @@
 #include <QtPrintSupport/QPrinter>
 #include <QtWidgets>
 #include<QFileDialog>
-
+#include "email.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -331,6 +331,23 @@ void MainWindow::on_insererphoto_clicked()
 
 
 /////////////////////////////////////////
+
+
+
+
+void MainWindow::on_mailing_clicked()
+{
+   email email;
+   email.setModal(true);
+   email.exec();
+
+}
+
+
+
+
+
+
 
 
 

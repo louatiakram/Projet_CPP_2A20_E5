@@ -78,6 +78,8 @@ private slots:
 
     void on_insererphoto_clicked();
 
+    void on_mailing_clicked();
+
 private:
     Ui::MainWindow *ui;
 

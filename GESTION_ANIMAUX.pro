@@ -8,7 +8,7 @@ QT       += core gui
 QT       += sql
 QT       += core gui multimedia multimediawidgets
 QT += printsupport
-
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,17 +29,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    email.cpp \
     gestion_animaux.cpp \
         main.cpp \
         mainwindow.cpp \
-    connection.cpp
+    connection.cpp \
+    smtp.cpp
 
 HEADERS += \
+    email.h \
     gestion_animaux.h \
         mainwindow.h \
-    connection.h
+    connection.h \
+    smtp.h
 
 FORMS += \
+        email.ui \
         mainwindow.ui
 
 # Default rules for deployment.

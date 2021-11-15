@@ -484,8 +484,8 @@ border: none;
      <widget class="QPushButton" name="ImportPDF">
       <property name="geometry">
        <rect>
-        <x>550</x>
-        <y>120</y>
+        <x>560</x>
+        <y>90</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -599,6 +599,36 @@ border: none;
        <string>Exit</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="mailing">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>160</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>mailing</string>
+      </property>
+     </widget>
      <zorder>label_11</zorder>
      <zorder>label_13</zorder>
      <zorder>label_10</zorder>
@@ -609,6 +639,7 @@ border: none;
      <zorder>ImportPDF</zorder>
      <zorder>table_id</zorder>
      <zorder>exitBtn</zorder>
+     <zorder>mailing</zorder>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -646,8 +677,8 @@ border: none;
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>-5</x>
-        <y>-5</y>
+        <x>-10</x>
+        <y>0</y>
         <width>901</width>
         <height>511</height>
        </rect>
@@ -675,11 +706,24 @@ border: none;
        <pixmap>../../background anim.jpg</pixmap>
       </property>
      </widget>
+     <widget class="QPushButton" name="exitBtn1">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>360</y>
+        <width>131</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
      <widget class="QWidget" name="layoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>30</y>
+        <x>80</x>
+        <y>20</y>
         <width>431</width>
         <height>411</height>
        </rect>
@@ -901,25 +945,12 @@ border: none;
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="exitBtn1">
-      <property name="geometry">
-       <rect>
-        <x>680</x>
-        <y>360</y>
-        <width>131</width>
-        <height>26</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Exit</string>
-      </property>
-     </widget>
      <zorder>label_14</zorder>
      <zorder>label_8</zorder>
      <zorder>label_7</zorder>
      <zorder>sendBtn</zorder>
-     <zorder>layoutWidget_2</zorder>
      <zorder>exitBtn1</zorder>
+     <zorder>layoutWidget_2</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
