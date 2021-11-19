@@ -1,7 +1,10 @@
-    #include "personnel.h"
+#include "personnel.h"
 #include<QtDebug>
 #include<QObject>
 #include <QMainWindow>
+#include <QDateTime>
+#include <QFile>
+#include <QMessageBox>
 
 Personnel::Personnel()
 {
@@ -126,7 +129,7 @@ QSqlQueryModel* Personnel::afficher()
     QSqlQueryModel* model=new QSqlQueryModel();
 
           model->setQuery("SELECT* FROM GESTION_PERSONNEL");
-          model->setHeaderData(0, Qt::Horizontal,QObject::tr("CIN"));
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("CIN"));
           model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
           model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRENOM"));
           model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
@@ -155,4 +158,112 @@ bool Personnel::modifierP()
 
                  return query.exec();
 
+}
+
+QSqlQueryModel* Personnel ::afficher_cin()
+{
+ QSqlQueryModel* model=new QSqlQueryModel();
+ model->setQuery("select CIN from GESTION_PERSONNEL");
+ model->setHeaderData(0,Qt::Horizontal,QObject::tr("CIN"));
+ return model;
+
+}
+
+
+
+QSqlQueryModel * Personnel::tri_cin()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from GESTION_PERSONNEL order by CIN");
+model->setHeaderData(0, Qt::Horizontal,QObject::tr("CIN"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRENOM"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("SALAIRE"));
+model->setHeaderData(5, Qt::Horizontal, QObject::tr("NUM_TEL"));
+    return model;
+}
+
+
+QSqlQueryModel * Personnel::tri_nom()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from GESTION_PERSONNEL order by NOM");
+model->setHeaderData(0, Qt::Horizontal,QObject::tr("CIN"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRENOM"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("SALAIRE"));
+model->setHeaderData(5, Qt::Horizontal, QObject::tr("NUM_TEL"));
+    return model;
+}
+
+
+
+
+QSqlQueryModel * Personnel::tri_salaire()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from GESTION_PERSONNEL order by SALAIRE");
+model->setHeaderData(0, Qt::Horizontal,QObject::tr("CIN"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRENOM"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("SALAIRE"));
+model->setHeaderData(5, Qt::Horizontal, QObject::tr("NUM_TEL"));
+    return model;
+}
+
+
+bool Personnel::ajouter1()
+{
+
+
+    QSqlQuery query;
+
+
+         query.prepare("INSERT INTO LOGIN(USERNAME,PASSWORD)" "VALUES (:USERNAME,:PASSWORD)");
+         query.bindValue(":USERNAME", USERNAME);
+         query.bindValue(":PASSWORD", PASSWORD);
+
+         return query.exec();
+
+
+}
+
+
+QString Personnel::read()
+{
+    QFile file("C:\\ESPRITORACLE\\atelier connection dd\\Atelier_Connexion\\history.txt");
+    if(!file.open(QIODevice::ReadOnly))
+        QMessageBox::information(0,"info",file.errorString());
+
+    QTextStream in(&file);
+
+    return  in.readAll();
+
+}
+
+void Personnel::write(QString time, QString txt)
+{
+    QFile file("C:\\ESPRITORACLE\\atelier connection dd\\Atelier_Connexion\\history.txt");
+    if(file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
+    {
+        QTextStream stream(&file);
+        stream<<time<<" "<<txt<<endl;
+        file.close();
+    }
+}
+
+QString Personnel::time()
+{
+    QDateTime time=time.currentDateTime();
+    return  time.toString();
+
+}
+
+void Personnel::clearh()
+{
+    QFile file("C:\\ESPRITORACLE\\atelier connection dd\\Atelier_Connexion\\history.txt");
+    file.open(QFile::WriteOnly|QFile::Truncate);
 }

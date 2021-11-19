@@ -10,6 +10,10 @@ class Connection
 public:
     Connection();
     bool createconnect();
+    bool ourirConnexion();
+    void fermerConnexion();
+
+
 };
 
 #endif // CONNECTION_H

@@ -4,6 +4,12 @@
 #include<QSqlQuery>
 #include<QSqlQueryModel>
 #include<QDoubleValidator>
+#include<QtDebug>
+#include<QObject>
+#include <QMainWindow>
+#include <QDateTime>
+#include <QFile>
+#include <QMessageBox>
 
 class Personnel
 {
@@ -30,12 +36,23 @@ public:
 
 
     bool ajouter();
+    bool ajouter1();
     bool modifierP();
     bool supprimer(int);
     QSqlQueryModel* afficher();
+    QSqlQueryModel* afficher_cin();
+    QSqlQueryModel* tri_cin();
+    QSqlQueryModel* tri_nom();
+    QSqlQueryModel* tri_salaire();
+
+    QString read();
+    void write(QString,QString);
+    QString time();
+    void clearh();
 
 
-
+    QString USERNAME;
+    QString PASSWORD;
 private:
     int CIN;
     QString NOM;

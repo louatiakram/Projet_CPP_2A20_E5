@@ -22,3 +22,14 @@ test=true;
 
     return  test;
 }
+
+
+void Connection::fermerConnexion(){db.close();}
+
+bool Connection::ourirConnexion(){
+    if (db.open())
+        return true ;
+    else
+        return false;
+
+}
