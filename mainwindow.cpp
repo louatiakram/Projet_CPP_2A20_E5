@@ -104,7 +104,6 @@ void MainWindow::on_modifier_clicked()
 {
 
     int id_animal=ui->table_id->currentText().toInt();
-    ui->tab_animal->update();
     QString nom=ui->le_nom->text();
     QString race=ui->la_race->text();
     int age=ui->le_age->text().toInt();
