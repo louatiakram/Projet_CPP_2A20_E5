@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql axcontainer printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,17 +20,22 @@ SOURCES += \
     gdp.cpp \
     gestiondesproduits.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qcustomplot.cpp \
+    statistique.cpp
 
 HEADERS += \
     connexion.h \
     gdp.h \
     gestiondesproduits.h \
-    mainwindow.h
+    mainwindow.h \
+    qcustomplot.h \
+    statistique.h
 
 FORMS += \
     gestiondesproduits.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    statistique.ui
 
 #Client ICON
 RC_ICONS = g.ico
@@ -42,4 +47,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     F.jpg \
+    MW.jpg \
+    SmartParc.png \
     g.ico

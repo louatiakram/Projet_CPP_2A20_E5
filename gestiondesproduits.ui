@@ -59,9 +59,9 @@
    <widget class="QGroupBox" name="G4">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>765</x>
       <y>20</y>
-      <width>113</width>
+      <width>115</width>
       <height>76</height>
      </rect>
     </property>
@@ -103,7 +103,7 @@ background-color: rgb(39, 39, 39);</string>
     <widget class="QPushButton" name="Supprimer">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>12</x>
        <y>38</y>
        <width>93</width>
        <height>28</height>
@@ -118,9 +118,17 @@ background-color: rgb(39, 39, 39);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string>background-color: rgb(56, 56, 56);
+      <string notr="true">QPushButton
+{
+border-radius:20px;
+background-color: rgb(56, 56, 56);
 color: rgb(255, 255, 255);
-</string>
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(255, 255, 255);
+}</string>
      </property>
      <property name="text">
       <string>Supprimer</string>
@@ -146,10 +154,10 @@ color: rgb(255, 255, 255);
     </property>
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>55</x>
       <y>20</y>
-      <width>271</width>
-      <height>200</height>
+      <width>381</width>
+      <height>192</height>
      </rect>
     </property>
     <property name="font">
@@ -232,8 +240,8 @@ background-color: rgb(39, 39, 39);</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>168</y>
-       <width>21</width>
+       <y>160</y>
+       <width>49</width>
        <height>16</height>
       </rect>
      </property>
@@ -246,7 +254,7 @@ background-color: rgb(39, 39, 39);</string>
       </font>
      </property>
      <property name="text">
-      <string>Qte</string>
+      <string>Quantite</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -276,8 +284,8 @@ background-color: rgb(39, 39, 39);</string>
     <widget class="QLineEdit" name="lineEdit_04">
      <property name="geometry">
       <rect>
-       <x>44</x>
-       <y>168</y>
+       <x>65</x>
+       <y>160</y>
        <width>70</width>
        <height>22</height>
       </rect>
@@ -298,7 +306,7 @@ background-color: rgb(39, 39, 39);</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>138</y>
+       <y>130</y>
        <width>21</width>
        <height>20</height>
       </rect>
@@ -321,7 +329,7 @@ background-color: rgb(39, 39, 39);</string>
     <widget class="QPushButton" name="Ajouter">
      <property name="geometry">
       <rect>
-       <x>145</x>
+       <x>170</x>
        <y>150</y>
        <width>93</width>
        <height>28</height>
@@ -337,9 +345,17 @@ background-color: rgb(39, 39, 39);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(56, 56, 56);
+      <string notr="true">QPushButton
+{
+border-radius:20px;
+background-color: rgb(56, 56, 56);
 color: rgb(255, 255, 255);
-</string>
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(255, 255, 255);
+}</string>
      </property>
      <property name="text">
       <string>Ajouter</string>
@@ -376,7 +392,7 @@ color: rgb(255, 255, 255);
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>84</y>
+       <y>70</y>
        <width>92</width>
        <height>16</height>
       </rect>
@@ -400,7 +416,7 @@ color: rgb(255, 255, 255);
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>112</y>
+       <y>100</y>
        <width>88</width>
        <height>16</height>
       </rect>
@@ -424,7 +440,7 @@ color: rgb(255, 255, 255);
      <property name="geometry">
       <rect>
        <x>44</x>
-       <y>140</y>
+       <y>130</y>
        <width>70</width>
        <height>22</height>
       </rect>
@@ -447,10 +463,10 @@ color: rgb(255, 255, 255);
     <widget class="QPushButton" name="Inserer_IMG">
      <property name="geometry">
       <rect>
-       <x>124</x>
-       <y>45</y>
-       <width>137</width>
-       <height>28</height>
+       <x>220</x>
+       <y>95</y>
+       <width>151</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -462,28 +478,27 @@ color: rgb(255, 255, 255);
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(56, 56, 56);
-color: rgb(255, 255, 255);</string>
+      <string notr="true">QPushButton
+{
+border-radius: 15px;
+color: rgb(255, 170, 0);
+background-color: rgba(56, 56, 56);
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(255, 170, 0);
+}</string>
      </property>
      <property name="text">
       <string>Inserer Image Prouit</string>
-     </property>
-    </widget>
-    <widget class="QGraphicsView" name="graphicsView">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>10</y>
-       <width>80</width>
-       <height>30</height>
-      </rect>
      </property>
     </widget>
     <widget class="QDateEdit" name="dateEdit">
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>82</y>
+       <y>70</y>
        <width>100</width>
        <height>22</height>
       </rect>
@@ -542,7 +557,7 @@ color: rgb(173,216, 230);</string>
       <bool>true</bool>
      </property>
      <property name="timeSpec">
-      <enum>Qt::TimeZone</enum>
+      <enum>Qt::LocalTime</enum>
      </property>
      <property name="date">
       <date>
@@ -556,7 +571,7 @@ color: rgb(173,216, 230);</string>
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>108</y>
+       <y>100</y>
        <width>100</width>
        <height>22</height>
       </rect>
@@ -592,7 +607,7 @@ color: rgb(199, 239, 255);</string>
       <bool>true</bool>
      </property>
      <property name="timeSpec">
-      <enum>Qt::TimeZone</enum>
+      <enum>Qt::LocalTime</enum>
      </property>
      <property name="date">
       <date>
@@ -602,39 +617,75 @@ color: rgb(199, 239, 255);</string>
       </date>
      </property>
     </widget>
+    <widget class="QLabel" name="IMG_Added">
+     <property name="geometry">
+      <rect>
+       <x>225</x>
+       <y>10</y>
+       <width>140</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
    <widget class="QPushButton" name="Statistique">
     <property name="geometry">
      <rect>
-      <x>1080</x>
-      <y>610</y>
-      <width>93</width>
-      <height>28</height>
+      <x>925</x>
+      <y>78</y>
+      <width>220</width>
+      <height>76</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>8</pointsize>
+      <pointsize>14</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(56, 56, 56);
-color: rgb(255, 255, 255);
+     <string notr="true">/*QPushButton
+{
+border-radius:20px;
+background-color: rgb(56, 56, 56);
+color: rgb(170, 85, 255);
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(170, 85, 255);
+}*/
+QPushButton
+{
+border-radius:20px;
+background-color: rgb(56, 56, 56);
+color: rgb(0, 174, 239);
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(0, 174, 239);
+}
 </string>
     </property>
     <property name="text">
-     <string>Statistique</string>
+     <string>STATISTIQUE</string>
     </property>
    </widget>
    <widget class="QGroupBox" name="G2">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>230</y>
-      <width>1020</width>
+      <width>1155</width>
       <height>450</height>
      </rect>
     </property>
@@ -659,8 +710,8 @@ background-color: rgb(39, 39, 39);</string>
     <widget class="QPushButton" name="PDF">
      <property name="geometry">
       <rect>
-       <x>855</x>
-       <y>380</y>
+       <x>990</x>
+       <y>385</y>
        <width>93</width>
        <height>32</height>
       </rect>
@@ -674,8 +725,17 @@ background-color: rgb(39, 39, 39);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(56, 56, 56);
-color: rgb(255, 170, 0);</string>
+      <string notr="true">QPushButton
+{
+border-radius: 20px;
+color: rgb(255, 170, 0);
+background-color: rgba(56, 56, 56);
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(255, 170, 0);
+}</string>
      </property>
      <property name="text">
       <string>PDF</string>
@@ -686,14 +746,14 @@ color: rgb(255, 170, 0);</string>
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>771</width>
+       <width>880</width>
        <height>430</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Arial</family>
-       <pointsize>8</pointsize>
+       <pointsize>9</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
@@ -705,14 +765,35 @@ background-color: rgb(182, 182, 182);</string>
      <property name="sizeAdjustPolicy">
       <enum>QAbstractScrollArea::AdjustIgnored</enum>
      </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
      <property name="showGrid">
       <bool>true</bool>
      </property>
+     <property name="gridStyle">
+      <enum>Qt::SolidLine</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>142</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
     </widget>
     <widget class="QGroupBox" name="TRIER">
      <property name="geometry">
       <rect>
-       <x>790</x>
+       <x>920</x>
        <y>20</y>
        <width>219</width>
        <height>71</height>
@@ -727,8 +808,8 @@ background-color: rgb(182, 182, 182);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-color: rgb(255, 170, 0);</string>
+      <string notr="true">color: rgb(255, 170, 0);
+</string>
      </property>
      <property name="title">
       <string>Trier</string>
@@ -775,7 +856,7 @@ color: rgb(255, 170, 0);</string>
        <string notr="true"/>
       </property>
       <property name="text">
-       <string>Quantiter</string>
+       <string>Quantite</string>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -809,10 +890,10 @@ color: rgb(255, 170, 0);</string>
     <widget class="QGroupBox" name="CHERCHER">
      <property name="geometry">
       <rect>
-       <x>790</x>
-       <y>110</y>
+       <x>920</x>
+       <y>100</y>
        <width>220</width>
-       <height>201</height>
+       <height>211</height>
       </rect>
      </property>
      <property name="font">
@@ -824,8 +905,8 @@ color: rgb(255, 170, 0);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-color: rgb(255, 170, 0);</string>
+      <string notr="true">color: rgb(255, 170, 0);
+</string>
      </property>
      <property name="title">
       <string>Chercher</string>
@@ -870,24 +951,6 @@ color: rgb(255, 170, 0);</string>
       </property>
       <property name="tristate">
        <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBoxQ">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>40</y>
-        <width>89</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Quantiter</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_08">
@@ -941,10 +1004,10 @@ color: rgb(255, 170, 0);</string>
      <widget class="QPushButton" name="Chercher">
       <property name="geometry">
        <rect>
-        <x>65</x>
+        <x>50</x>
         <y>150</y>
-        <width>93</width>
-        <height>28</height>
+        <width>121</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -955,21 +1018,51 @@ color: rgb(255, 170, 0);</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(56, 56, 56);
-color: rgb(255, 170, 0);</string>
+       <string notr="true">QPushButton
+{
+border-radius: 20px;
+color: rgb(255, 170, 0);
+background-color: rgba(56, 56, 56);
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(255, 170, 0);
+}</string>
       </property>
       <property name="text">
        <string>CHERCHER</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBoxQ">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>89</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Quantite</string>
+      </property>
+      <property name="tristate">
+       <bool>false</bool>
       </property>
      </widget>
     </widget>
     <widget class="QPushButton" name="Reafficher">
      <property name="geometry">
       <rect>
-       <x>830</x>
+       <x>950</x>
        <y>330</y>
-       <width>139</width>
-       <height>34</height>
+       <width>161</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
@@ -980,11 +1073,48 @@ color: rgb(255, 170, 0);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(56, 56, 56);
-color: rgb(255, 170, 0);</string>
+      <string notr="true">QPushButton
+{
+border-radius: 20px;
+color: rgb(255, 170, 0);
+background-color: rgba(56, 56, 56);
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(255, 170, 0);
+}</string>
      </property>
      <property name="text">
       <string>REAFFICHER</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>5</y>
+       <width>3</width>
+       <height>440</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(182, 182, 182);</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>10</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
     </widget>
     <zorder>TRIER</zorder>
@@ -992,12 +1122,13 @@ color: rgb(255, 170, 0);</string>
     <zorder>CHERCHER</zorder>
     <zorder>PDF</zorder>
     <zorder>Reafficher</zorder>
+    <zorder>line</zorder>
    </widget>
    <widget class="QPushButton" name="Quitter">
     <property name="geometry">
      <rect>
-      <x>1080</x>
-      <y>644</y>
+      <x>1108</x>
+      <y>0</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -1010,11 +1141,20 @@ color: rgb(255, 170, 0);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(56, 56, 56);
-color: rgb(255, 255, 255);</string>
+     <string notr="true">QPushButton
+{
+border-radius:20px;
+background-color: rgb(56, 56, 56);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(255, 255, 255);
+}</string>
     </property>
     <property name="text">
-     <string>Quitter</string>
+     <string>Smart Parc</string>
     </property>
    </widget>
    <widget class="QGroupBox" name="G3">
@@ -1023,9 +1163,9 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>475</x>
       <y>20</y>
-      <width>233</width>
+      <width>281</width>
       <height>182</height>
      </rect>
     </property>
@@ -1192,7 +1332,7 @@ background-color: rgb(39, 39, 39);</string>
       <rect>
        <x>10</x>
        <y>150</y>
-       <width>21</width>
+       <width>49</width>
        <height>16</height>
       </rect>
      </property>
@@ -1205,7 +1345,7 @@ background-color: rgb(39, 39, 39);</string>
       </font>
      </property>
      <property name="text">
-      <string>Qte</string>
+      <string>Quantite</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1238,7 +1378,7 @@ background-color: rgb(39, 39, 39);</string>
     <widget class="QPushButton" name="Modifier">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>145</x>
        <y>133</y>
        <width>93</width>
        <height>28</height>
@@ -1254,9 +1394,17 @@ background-color: rgb(39, 39, 39);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string>background-color: rgb(56, 56, 56);
+      <string notr="true">QPushButton
+{
+border-radius:20px;
+background-color: rgb(56, 56, 56);
 color: rgb(255, 255, 255);
-</string>
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(255, 255, 255);
+}</string>
      </property>
      <property name="text">
       <string>Modifier</string>
@@ -1284,7 +1432,7 @@ color: rgb(255, 255, 255);
     <widget class="QLineEdit" name="lineEdit_07">
      <property name="geometry">
       <rect>
-       <x>44</x>
+       <x>65</x>
        <y>150</y>
        <width>70</width>
        <height>22</height>
@@ -1342,7 +1490,7 @@ color: rgb(173,216, 230);</string>
       <bool>true</bool>
      </property>
      <property name="timeSpec">
-      <enum>Qt::TimeZone</enum>
+      <enum>Qt::LocalTime</enum>
      </property>
      <property name="date">
       <date>
@@ -1395,7 +1543,7 @@ color: rgb(199, 239, 255);</string>
       <bool>true</bool>
      </property>
      <property name="timeSpec">
-      <enum>Qt::TimeZone</enum>
+      <enum>Qt::LocalTime</enum>
      </property>
      <property name="date">
       <date>
@@ -1423,7 +1571,6 @@ color: rgb(199, 239, 255);</string>
   <tabstop>lineEdit_03</tabstop>
   <tabstop>lineEdit_04</tabstop>
   <tabstop>Inserer_IMG</tabstop>
-  <tabstop>graphicsView</tabstop>
   <tabstop>Ajouter</tabstop>
   <tabstop>comboBox_01</tabstop>
   <tabstop>lineEdit_05</tabstop>
@@ -1434,6 +1581,8 @@ color: rgb(199, 239, 255);</string>
   <tabstop>Modifier</tabstop>
   <tabstop>comboBox_02</tabstop>
   <tabstop>Supprimer</tabstop>
+  <tabstop>Statistique</tabstop>
+  <tabstop>Quitter</tabstop>
   <tabstop>TRIN</tabstop>
   <tabstop>TRIQ</tabstop>
   <tabstop>TRIP</tabstop>
@@ -1446,8 +1595,6 @@ color: rgb(199, 239, 255);</string>
   <tabstop>Chercher</tabstop>
   <tabstop>Reafficher</tabstop>
   <tabstop>PDF</tabstop>
-  <tabstop>Statistique</tabstop>
-  <tabstop>Quitter</tabstop>
   <tabstop>tableView</tabstop>
  </tabstops>
  <resources/>

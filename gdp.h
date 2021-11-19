@@ -2,14 +2,18 @@
 #define GDP_H
 #include <QPixmap>
 #include <QString>
-#include <QSqlQuery>
-#include <QSqlQueryModel>
 #include <QDialog>
 #include <QDate>
 #include <QtDebug>
 #include <QIntValidator>
 #include <QMessageBox>
 #include <QObject>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+#include <QTabWidget>
+#include <QTableWidgetItem>
+#include <QTextDocument>
+#include "QtPrintSupport"
 
 class GDP
 {
@@ -18,7 +22,7 @@ private:
    QString NOM_PRODUIT;
    QDate DATE_PRODUCTION;
    QDate DATE_EXPIRATION;
-   double PRIX;
+   qreal PRIX;
    int QUANTITE;
 
 public:
@@ -43,6 +47,16 @@ public:
    bool modifier(int);
    bool supprimer(int);
    QSqlQueryModel* afficher();
+   QSqlQueryModel* trie_produitQ();
+   QSqlQueryModel* trie_produitP();
+   QSqlQueryModel* trie_produitN();
+   QSqlQueryModel* chercherN(QString);
+   QSqlQueryModel* chercherP(qreal);
+   QSqlQueryModel* chercherQ(int);
+   QSqlQueryModel* chercherNP(QString, qreal);
+   QSqlQueryModel* chercherNQ(QString, int);
+   QSqlQueryModel* chercherQP(int, qreal);
+   QSqlQueryModel* chercherT( QString, qreal, int);
 };
 
 #endif // GDP_H

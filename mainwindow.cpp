@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "gestiondesproduits.h"
-#include "gdp.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QPixmap pix("C:/Users/ASUS/Desktop/2021-2022/Projects/C++Qt/Projects/Gestion Des Produits/F.jpg");
+    QPixmap pix("C:/Users/ASUS/Desktop/2021-2022/Projects/C++Qt/Projects/Gestion Des Produits/MW.jpg");
     ui->IMG->setPixmap(pix.scaled(1200,700,Qt::KeepAspectRatio));
 }
 
