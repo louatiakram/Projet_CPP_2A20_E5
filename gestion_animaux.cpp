@@ -1,6 +1,7 @@
 #include "gestion_animaux.h"
 #include<QtDebug>
 #include<QObject>
+#include <numeric>
 Animaux::Animaux()
 {
 id_animal=0; nom=""; race="";age=0;date_entree="";emplacement="";
@@ -107,12 +108,7 @@ Animaux::Animaux(int id_animal ,QString nom ,QString race,int age,QString date_e
         QSqlQueryModel* model=new QSqlQueryModel();
 
               model->setQuery("SELECT* FROM GESTION_ANIMAUX");
-              model->setHeaderData(0, Qt::Horizontal,QObject::tr("id_animal"));
-              model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
-              model->setHeaderData(2, Qt::Horizontal, QObject::tr("race"));
-              model->setHeaderData(3, Qt::Horizontal, QObject::tr("age"));
-              model->setHeaderData(4, Qt::Horizontal, QObject::tr("date_entree"));
-              model->setHeaderData(5, Qt::Horizontal, QObject::tr("emplacement"));
+
 
               return  model;
     }
@@ -156,36 +152,21 @@ Animaux::Animaux(int id_animal ,QString nom ,QString race,int age,QString date_e
    {QSqlQueryModel * model= new QSqlQueryModel();
 
    model->setQuery("select * from GESTION_ANIMAUX order by id_animal");
-   model->setHeaderData(0, Qt::Horizontal,QObject::tr("id_animal"));
-   model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
-   model->setHeaderData(2, Qt::Horizontal, QObject::tr("race"));
-   model->setHeaderData(3, Qt::Horizontal, QObject::tr("age"));
-   model->setHeaderData(4, Qt::Horizontal, QObject::tr("date_entree"));
-   model->setHeaderData(5, Qt::Horizontal, QObject::tr("emplacement"));
+
        return model;
    }
    QSqlQueryModel * Animaux::tri_age()
    {QSqlQueryModel * model= new QSqlQueryModel();
 
    model->setQuery("select * from GESTION_ANIMAUX order by age");
-   model->setHeaderData(0, Qt::Horizontal,QObject::tr("id_animal"));
-   model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
-   model->setHeaderData(2, Qt::Horizontal, QObject::tr("race"));
-   model->setHeaderData(3, Qt::Horizontal, QObject::tr("age"));
-   model->setHeaderData(4, Qt::Horizontal, QObject::tr("date_entree"));
-   model->setHeaderData(5, Qt::Horizontal, QObject::tr("emplacement"));
+
        return model;
    }
    QSqlQueryModel * Animaux::tri_nom()
    {QSqlQueryModel * model= new QSqlQueryModel();
 
-   model->setQuery("select * from GESTION_ANIMAUX order by nom");
-   model->setHeaderData(0, Qt::Horizontal,QObject::tr("id_animal"));
-   model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
-   model->setHeaderData(2, Qt::Horizontal, QObject::tr("race"));
-   model->setHeaderData(3, Qt::Horizontal, QObject::tr("age"));
-   model->setHeaderData(4, Qt::Horizontal, QObject::tr("date_entree"));
-   model->setHeaderData(5, Qt::Horizontal, QObject::tr("emplacement"));
+  model->setQuery("select * from GESTION_ANIMAUX order by nom");
+
        return model;
    }
    void Animaux::clearTable(QTableView *table)
@@ -211,3 +192,4 @@ Animaux::Animaux(int id_animal ,QString nom ,QString race,int age,QString date_e
       table->setModel(model);
       table->show();
    }
+

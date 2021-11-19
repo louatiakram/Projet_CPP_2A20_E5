@@ -102,7 +102,9 @@ void MainWindow::on_pb_supprimer_clicked()
 
 void MainWindow::on_modifier_clicked()
 {
+
     int id_animal=ui->table_id->currentText().toInt();
+    ui->tab_animal->update();
     QString nom=ui->le_nom->text();
     QString race=ui->la_race->text();
     int age=ui->le_age->text().toInt();
@@ -309,7 +311,7 @@ void MainWindow::on_ImportPDF_clicked()
 
 void MainWindow::on_insererphoto_clicked()
 {
-   QString filename = QFileDialog::getSaveFileName(this,tr("choose"),"",tr("Image(*.png *.jpeg *.jpg *.bmp *.gif)"));
+   QString filename = QFileDialog::getSaveFileName(this,tr("choose"),"",tr("Image( *.jpeg *.jpg *.bmp *.gif)"));
    if (QString::compare(filename,QString()) !=0)
    {
        QImage image;
@@ -351,3 +353,28 @@ void MainWindow::on_mailing_clicked()
 
 
 
+
+
+
+void MainWindow::on_code_qr_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://qrcode.tec-it.com/fr"));
+    QString filename = QFileDialog::getSaveFileName(this,tr("choose"),"",tr("Image(*.png )"));
+    if (QString::compare(filename,QString()) !=0)
+    {
+        QImage image;
+        bool valid = image.load(filename);
+        if(valid)
+        {
+            image=image.scaledToWidth(ui->lbl_image_2->width(), Qt::SmoothTransformation);
+                    ui->lbl_image_2->setPixmap(QPixmap::fromImage(image));
+        }
+        else
+        {
+            //ERROR HANDLING
+        }
+    }
+
+
+
+}

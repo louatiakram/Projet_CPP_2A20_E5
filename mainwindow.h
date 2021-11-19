@@ -80,6 +80,12 @@ private slots:
 
     void on_mailing_clicked();
 
+    void on_somme_clicked();
+
+
+
+    void on_code_qr_clicked();
+
 private:
     Ui::MainWindow *ui;
 
