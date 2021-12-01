@@ -12,8 +12,8 @@
 #include <QtWidgets>
 #include<QFileDialog>
 #include "email.h"
-
-
+#include <QPainter>
+#include<ctime>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -242,68 +242,74 @@ void MainWindow::on_Lienderenseignement_9_clicked()
 
 /////////////////////////////////////////////////////////
 
+
+
 void MainWindow::on_ImportPDF_clicked()
 {
-    QString strStream;
-     QTextStream out(&strStream);
-
-     const int rowCount = ui->tab_animal->model()->rowCount();
-     const int columnCount = ui->tab_animal->model()->columnCount();
-
-     out <<  "<html>\n"
-             "<head>\n"
-             "<meta Content=\"Text/html; charset=Windows-1251\">\n"
-          <<  QString("<title>%1</title>\n").arg("Title")
-           <<  "</head>\n"
-            <<"<body bgcolor=#ffffff link=#5000A0>\n"
-
-            //     "<align='right'> " << datefich << "</align>"
-            <<"<center> <H1>Liste des animaux </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
 
 
-     // headers
-     out << "<thead><tr bgcolor=#f0f0f0>";
-     for (int column = 0; column < columnCount; column++)
-         if (!ui->tab_animal->isColumnHidden(column))
-             out << QString("<th>%1</th>").arg(ui->tab_animal->model()->headerData(column, Qt::Horizontal).toString());
-     out << "</tr></thead>\n";
+         ///////////////////////////////
 
-     // data table
-     for (int row = 0; row < rowCount; row++) {
-         out << "<tr>";
-         for (int column = 0; column < columnCount; column++) {
-             if (!ui->tab_animal->isColumnHidden(column)) {
-                 QString data = ui->tab_animal->model()->data(ui->tab_animal->model()->index(row, column)).toString().simplified();
-                 out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+             QPdfWriter pdf("C:/Users/azizb/Desktop/aaaaaaaaaa/Liste.pdf");
+
+             QPainter painter(&pdf);
+
+             int i = 4000;
+             painter.setPen(Qt::black);
+             painter.setFont(QFont("Arial", 30));
+             painter.drawPixmap(QRect(100,400,2000,2000),QPixmap("C:/Users/azizb/Desktop/aaaaaaaaaa/logo.jpg"));
+             painter.drawText(3000,1500,"LISTE DES ANIMAUX");
+             painter.setPen(Qt::blue);
+             painter.setFont(QFont("Arial", 50));
+             painter.drawRect(2700,200,6300,2600);
+             painter.drawRect(0,3000,9600,500);
+             painter.setPen(Qt::black);
+             painter.setFont(QFont("Arial", 9));
+             painter.drawText(300,3300,"id_animal");
+             painter.drawText(2300,3300,"nom");
+             painter.drawText(4300,3300,"race");
+             painter.drawText(6000,3300,"age");
+             painter.drawText(8300,3300,"date_entree");
+             painter.drawText(10300,3300,"emplacement");
+             QSqlQuery query;
+             query.prepare("<SELECT CAST( GETDATE() AS Date ) ");
+             time_t tt;
+             struct tm* ti;
+             time(&tt);
+             ti=localtime(&tt);
+             asctime(ti);
+             painter.drawText(500,300, asctime(ti));
+             query.prepare("select * from GESTION_ANIMAUX");
+             query.exec();
+             while (query.next())
+             {
+                 painter.drawText(300,i,query.value(0).toString());
+                 painter.drawText(2300,i,query.value(1).toString());
+                 painter.drawText(4300,i,query.value(2).toString());
+                 painter.drawText(6300,i,query.value(3).toString());
+                 painter.drawText(8000,i,query.value(4).toString());
+                 painter.drawText(10000,i,query.value(5).toString());
+                 i = i +500;
+             }
+
+             int reponse = QMessageBox::question(this, "PDF généré", "Afficher le PDF ?", QMessageBox::Yes |  QMessageBox::No);
+             if (reponse == QMessageBox::Yes)
+             {
+                 QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/azizb/Desktop/aaaaaaaaaa/Liste.pdf"));
+
+                 painter.end();
+             }
+             if (reponse == QMessageBox::No)
+             {
+                 painter.end();
              }
          }
-         out << "</tr>\n";
-     }
-     out <<  "</table>\n"
-             "</body>\n"
-             "</html>\n";
 
 
 
-         QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Sauvegarder en PDF", QString(), "*.pdf");
-         if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".pdf"); }
-         QPrinter *printer=new  QPrinter(QPrinter::PrinterResolution);
-         printer->setOutputFormat(QPrinter::PdfFormat);
-         printer->setPaperSize(QPrinter::A4);
-         printer->setOutputFileName(fileName);
 
-         QTextDocument doc;
-         doc.setHtml(strStream);
-         doc.setPageSize(printer->pageRect().size()); // This is necessary if you want to hide the page number
-         doc.print(printer);
+         ////////////////////////////////
 
-         QPrinter *p=new QPrinter();
-         QPrintDialog dialog(p,this);
-         if(dialog.exec()== QDialog::Rejected)
-         {
-             return;
-         }
-}
 
 
 
@@ -377,3 +383,42 @@ void MainWindow::on_code_qr_clicked()
 
 
 }
+
+
+
+
+
+
+
+
+
+void MainWindow::on_table_id_currentIndexChanged(int index)
+{
+
+
+        int id_animal=ui->table_id->currentIndex();
+        QString id_animal_string=QString::number(id_animal);
+
+        QSqlQuery query;
+        query.prepare("SELECT * FROM GESTION_ANIMAUX where id_animal='"+id_animal_string+"'");
+
+        if(query.exec())
+        {
+            while (query.next())
+            {
+                ui->le_id->setText(query.value(0).toString()) ;
+              ui->le_nom->setText(query.value(1).toString()) ;
+              ui->la_race->setText(query.value(2).toString()) ;
+              ui->le_age->setText(query.value(3).toString()) ;
+              ui->la_date->setText(query.value(4).toString()) ;
+              ui->le_emplacement->setText(query.value(5).toString()) ;
+            }
+        }
+        else
+        {
+            QMessageBox::critical(nullptr, QObject::tr("NOT OK "),
+                        QObject::tr("Echec.\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+        }
+    }
+

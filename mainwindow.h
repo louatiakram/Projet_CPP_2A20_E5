@@ -86,6 +86,10 @@ private slots:
 
     void on_code_qr_clicked();
 
+    void on_load_clicked();
+
+    void on_insererphoto_2_clicked();
+
 private:
     Ui::MainWindow *ui;
 
