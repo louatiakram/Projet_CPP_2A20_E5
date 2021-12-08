@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>280</y>
+      <y>250</y>
       <width>331</width>
       <height>71</height>
      </rect>
@@ -112,7 +112,7 @@ background-color: rgb(255, 255, 255);
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>190</y>
+      <y>160</y>
       <width>331</width>
       <height>71</height>
      </rect>
@@ -145,7 +145,7 @@ background-color: rgb(239, 64, 54);
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>370</y>
+      <y>340</y>
       <width>331</width>
       <height>71</height>
      </rect>
@@ -178,7 +178,7 @@ background-color: rgb(239, 64, 54);
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>460</y>
+      <y>430</y>
       <width>331</width>
       <height>71</height>
      </rect>
@@ -240,6 +240,39 @@ background-color: rgb(255, 255, 255);
      <string>Return</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>520</y>
+      <width>331</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+border-radius: 20px;
+color: rgb(239, 64, 54);
+background-color: rgba(56, 56, 56);
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(239, 64, 54);
+}</string>
+    </property>
+    <property name="text">
+     <string>GESTION DES EVENNEMENT</string>
+    </property>
+   </widget>
    <zorder>IMG</zorder>
    <zorder>pushButton</zorder>
    <zorder>pushButton_04</zorder>
@@ -247,6 +280,7 @@ background-color: rgb(255, 255, 255);
    <zorder>pushButton_3</zorder>
    <zorder>pushButton_4</zorder>
    <zorder>Quitter</zorder>
+   <zorder>pushButton_5</zorder>
   </widget>
  </widget>
  <resources/>

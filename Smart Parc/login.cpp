@@ -9,6 +9,9 @@ login::login(QWidget *parent) :
     ui(new Ui::login)
 {
    ui->setupUi(this);
+   QPixmap pix("C:/Users/ASUS/Desktop/Smart Parc/SmartParc.png");
+   ui->label_3->setPixmap(pix.scaledToWidth(ui->label_3->width(), Qt::SmoothTransformation));
+   ui->label_3->setPixmap(pix.scaledToHeight(ui->label_3->height(), Qt::SmoothTransformation));
 }
 
 login::~login()

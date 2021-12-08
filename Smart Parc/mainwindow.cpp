@@ -6,7 +6,7 @@
 #include "login.h"
 #include "login_bd.h"
 #include "connexion.h"
-#include "gdv.h"
+#include "dialog_v.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -51,9 +51,9 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    GDV GDV;
-   GDV.setModal(true);
-   GDV.exec();
+   Dialog_v Dialog_v;
+   Dialog_v.setModal(true);
+   Dialog_v.exec();
 }
 
 void MainWindow::on_Quitter_clicked()

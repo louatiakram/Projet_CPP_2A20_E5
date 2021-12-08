@@ -25,10 +25,10 @@ SOURCES += \
     connexion.cpp \
     dialog.cpp \
     dialog_perso.cpp \
+    dialog_v.cpp \
     email.cpp \
     excel.cpp \
     gdp.cpp \
-    gdv.cpp \
     gestion_animaux.cpp \
     gestiondesproduits.cpp \
     login.cpp \
@@ -45,10 +45,10 @@ HEADERS += \
     connexion.h \
     dialog.h \
     dialog_perso.h \
+    dialog_v.h \
     email.h \
     excel.h \
     gdp.h \
-    gdv.h \
     gestion_animaux.h \
     gestiondesproduits.h \
     login.h \
@@ -63,8 +63,8 @@ HEADERS += \
 FORMS += \
     dialog.ui \
     dialog_perso.ui \
+    dialog_v.ui \
     email.ui \
-    gdv.ui \
     gestiondesproduits.ui \
     login.ui \
     mainwindow.ui \
