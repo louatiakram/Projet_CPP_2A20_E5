@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="Quitter">
+   <property name="geometry">
+    <rect>
+     <x>1108</x>
+     <y>0</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+border-radius:20px;
+background-color: rgb(56, 56, 56);
+color: rgb(255, 255, 255);
+}
+QPushButton:hover
+{
+color: rgb(56, 56, 56);
+background-color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Smart Parc</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>AA.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mailing">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>100</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>mailing</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ImportPDF">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>60</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Export PDF</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="trier_age">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>670</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>trier age</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="trier_id">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>670</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>trier id</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tab_animal">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>330</y>
+     <width>771</width>
+     <height>331</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_23">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>670</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Rechercher</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_rechercher">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>670</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="trier_nom">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>670</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>trier nom</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_5">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>220</y>
+     <width>27</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>chat</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_4">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>380</y>
+     <width>26</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>focs</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_6">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>340</y>
+     <width>47</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>penguin</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_17">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>340</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR LES PENGUINS CLIQUEZ ICI  -------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_8">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>260</y>
+     <width>38</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>panda</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_12">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>260</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR PANDA CLIQUEZ ICI        -----------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_4">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>220</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR LES CHATS CLIQUEZ ICI -----------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_10">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>510</y>
+     <width>23</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>lion</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_7">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>300</y>
+     <width>41</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>dophin</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_16">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>430</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR LES TIGERS C CLIQUEZ ICI -------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_13">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>300</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR LES DOPHIN CLIQUEZ ICI -----------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_19">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>510</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR LES LIONS CLIQUEZ ICI -----------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_2">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>180</y>
+     <width>33</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>chien</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_18">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>550</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR LES GIRAFES CLIQUEZ ICI ----------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_15">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>470</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR LES AUTRUCHES CLIQUEZ ICI ------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_3">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>430</y>
+     <width>28</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>tiger</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_11">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>470</y>
+     <width>51</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>autruche</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_10">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>180</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR LES CHIENS CLIQUEZ ICI -----------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="uname_14">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>380</y>
+     <width>321</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>POUR PLUS D'INFORMATION SUR LES FOCS CLIQUEZ ICI -----------&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lienderenseignement_12">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>550</y>
+     <width>40</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>girafes</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="table_id">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>270</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_ajouter">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>50</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>ajouter</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_image">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>50</y>
+     <width>141</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>230</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;xx&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string> DATE ENTREE</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_id">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>40</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_age">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>180</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="la_date">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>230</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="la_race">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>140</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="modifier">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>120</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>modifier</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_image_2">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>50</y>
+     <width>141</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="code_qr">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>260</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>code_qr</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="insererphoto">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>260</y>
+     <width>111</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>inserer photo</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>90</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string> NOM</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>140</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string> RACE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="load">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>230</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>load</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_emplacement">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>280</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_nom">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>90</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_supprimer">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>180</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: #dcdcdc;
+background:#535353;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color: rgb(0, 0, 127);
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>supprimer</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>190</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string> AGE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>280</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string> EMPLACEMENT</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>40</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: #000000;
+background:#FFC0CB;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#FFC0CB;
+background-color: rgb(0rgb(0, 255, 0), 0, 127);
+border: none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>ID ANIMAL</string>
+   </property>
+  </widget>
+  <zorder>label_10</zorder>
+  <zorder>Quitter</zorder>
+  <zorder>mailing</zorder>
+  <zorder>ImportPDF</zorder>
+  <zorder>trier_age</zorder>
+  <zorder>trier_id</zorder>
+  <zorder>tab_animal</zorder>
+  <zorder>label_23</zorder>
+  <zorder>le_rechercher</zorder>
+  <zorder>trier_nom</zorder>
+  <zorder>Lienderenseignement_5</zorder>
+  <zorder>Lienderenseignement_4</zorder>
+  <zorder>Lienderenseignement_6</zorder>
+  <zorder>uname_17</zorder>
+  <zorder>Lienderenseignement_8</zorder>
+  <zorder>uname_12</zorder>
+  <zorder>uname_4</zorder>
+  <zorder>Lienderenseignement_10</zorder>
+  <zorder>Lienderenseignement_7</zorder>
+  <zorder>uname_16</zorder>
+  <zorder>uname_13</zorder>
+  <zorder>uname_19</zorder>
+  <zorder>Lienderenseignement_2</zorder>
+  <zorder>uname_18</zorder>
+  <zorder>uname_15</zorder>
+  <zorder>Lienderenseignement_3</zorder>
+  <zorder>Lienderenseignement_11</zorder>
+  <zorder>uname_10</zorder>
+  <zorder>uname_14</zorder>
+  <zorder>Lienderenseignement_12</zorder>
+  <zorder>table_id</zorder>
+  <zorder>pb_ajouter</zorder>
+  <zorder>lbl_image</zorder>
+  <zorder>label_5</zorder>
+  <zorder>le_id</zorder>
+  <zorder>le_age</zorder>
+  <zorder>la_date</zorder>
+  <zorder>la_race</zorder>
+  <zorder>modifier</zorder>
+  <zorder>lbl_image_2</zorder>
+  <zorder>code_qr</zorder>
+  <zorder>insererphoto</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>load</zorder>
+  <zorder>le_emplacement</zorder>
+  <zorder>le_nom</zorder>
+  <zorder>pb_supprimer</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_4</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
