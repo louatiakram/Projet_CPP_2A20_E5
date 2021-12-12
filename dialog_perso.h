@@ -37,6 +37,8 @@ private slots:
 
     void on_table_cin_currentIndexChanged(int index);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::Dialog_perso *ui;
     Personnel P;

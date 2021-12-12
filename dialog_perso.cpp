@@ -9,6 +9,7 @@
 #include<QDesktopServices>
 #include<QFileDialog>
 #include <QPushButton>
+#include "porte.h"
 
 
 Dialog_perso::Dialog_perso(QWidget *parent) :
@@ -241,4 +242,11 @@ void Dialog_perso::on_table_cin_currentIndexChanged(int )
                         QObject::tr("ECHEC DE chargement .\n"
                                     "Click Cancel to exit."), QMessageBox::Cancel);
         }
+}
+
+void Dialog_perso::on_pushButton_clicked()
+{
+    porte porte;
+    porte.setModal(true);
+    porte.exec();
 }

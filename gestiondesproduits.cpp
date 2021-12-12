@@ -310,6 +310,7 @@ void GestionDesProduits::on_lineEdit_09_textChanged(const QString &arg1)
 
 void GestionDesProduits::on_SDA_clicked()
 {
-    S = new SDA(this);
-    S->show();
+    SDA SDA;
+    SDA.setModal(true);
+    SDA.exec();
 }
