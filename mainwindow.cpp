@@ -33,7 +33,11 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_04_clicked()
 {
-    exit(1);
+    QMessageBox::StandardButton reply=QMessageBox::question(this,
+                                                             "Exit","Do you really want to exit ?",
+                                                             QMessageBox::Yes|QMessageBox::No);
+    if(reply==QMessageBox::Yes){QApplication::quit();}
+        else{qDebug() << "No Is Clicked";}
 }
 
 void MainWindow::on_pushButton_2_clicked()

@@ -44,7 +44,7 @@ void Dialog_perso::on_pb_ajouter_clicked()
     int AGE=ui->le_age->text().toInt();
     int SALAIRE=ui->le_salaire->text().toInt();
     int NUM_TEL=ui->le_numero->text().toInt();
-    int CIN_DIRIGEUR;
+    int CIN_DIRIGEUR = 0;
     Personnel P(CIN,NOM,PRENOM,AGE,SALAIRE,NUM_TEL,CIN_DIRIGEUR);
 
     bool test=P.ajouter();
@@ -110,7 +110,7 @@ void Dialog_perso::on_pb_modifier_clicked()
     int AGE=ui->le_age->text().toInt();
     int SALAIRE=ui->le_salaire->text().toInt();
     int NUM_TEL=ui->le_numero->text().toInt();
-    int CIN_DIRIGEUR;
+    int CIN_DIRIGEUR = 0;
     Personnel P(CIN,NOM,PRENOM,AGE,SALAIRE,NUM_TEL,CIN_DIRIGEUR);
 
     bool test=P.modifierP();

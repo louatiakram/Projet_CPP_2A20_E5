@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Gestion Des Evennements</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(39, 39, 39);</string>
@@ -19,7 +19,7 @@
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>330</x>
      <y>30</y>
      <width>291</width>
      <height>241</height>
@@ -846,7 +846,7 @@ background-color: rgb(45, 45, 45);
   <widget class="QGroupBox" name="groupBox_3">
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>660</x>
      <y>30</y>
      <width>171</width>
      <height>151</height>
@@ -864,7 +864,7 @@ background-color: rgb(45, 45, 45);
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>50</x>
       <y>10</y>
       <width>81</width>
       <height>16</height>

@@ -1,5 +1,6 @@
 #include "sda.h"
 #include "ui_sda.h"
+#include "gestiondesproduits.h"
 
 
 SDA::SDA(QWidget *parent) :
@@ -7,10 +8,12 @@ SDA::SDA(QWidget *parent) :
     ui(new Ui::SDA)
 {
     ui->setupUi(this);
+
     serial = new QSerialPort(); //Inicializa la variable Serial
         arduino_available = false;
 
-        foreach (const QSerialPortInfo &serial_Info, QSerialPortInfo::availablePorts()) {//Lee la información de cada puerto serial
+        foreach (const QSerialPortInfo &serial_Info, QSerialPortInfo::availablePorts())
+        {//Lee la información de cada puerto serial
             qDebug()<<"port: "<<serial_Info.portName();
             portname = serial_Info.portName();
             qDebug()<<"Vendor Id: "<<serial_Info.vendorIdentifier();
@@ -23,6 +26,7 @@ SDA::SDA(QWidget *parent) :
         {
             arduino_init();
         }
+
 }
 
 SDA::~SDA()
@@ -42,29 +46,24 @@ void SDA::arduino_init()
     connect(serial,SIGNAL(readyRead()),this,SLOT(serial_read()));
 }
 
+void SDA::update_dist(const QString sensor_reading)
+{
+    ui->lineEdit->setText(sensor_reading);
+}
+
 void SDA::serial_read()
 {
+
     if(serial->isWritable()&&arduino_available)
     {
      serialData = serial->readAll();
      serialBuffer +=QString::fromStdString(serialData.toStdString());
         qDebug()<<serialBuffer;
      SDA::update_dist(serialBuffer);
-
     }
 }
-
-
-void SDA::update_dist(const QString sensor_reading)
-{
-    ui->lineEdit->setText(sensor_reading);
-}
-
-
-
 
 void SDA::on_pushButton_04_clicked()
 {
     close();
 }
-

@@ -1,4 +1,4 @@
-QT       += core gui sql axcontainer printsupport network serialport multimedia multimediawidgets
+QT       += core gui sql axcontainer printsupport network serialport multimedia multimediawidgets charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -82,9 +82,12 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     AA.jpg \
+    EE.jpg \
     F.jpg \
     FF.jpg \
     MW.jpg \
     PP.jpg \
+    SmartParc.ico \
     SmartParc.png \
+    VV.jpg \
     g.ico

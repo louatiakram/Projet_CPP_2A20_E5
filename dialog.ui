@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Gestion Des Animaux</string>
   </property>
   <widget class="QPushButton" name="Quitter">
    <property name="geometry">

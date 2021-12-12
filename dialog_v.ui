@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Gestion Des Visiteurs</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(39, 39, 39);</string>
@@ -206,7 +206,7 @@ border: 2px solid rgb(172, 172, 172);
   <widget class="QGroupBox" name="groupBox_3">
    <property name="geometry">
     <rect>
-     <x>750</x>
+     <x>700</x>
      <y>40</y>
      <width>171</width>
      <height>151</height>
@@ -672,7 +672,7 @@ border-radius: 10px;</string>
   <widget class="QGroupBox" name="groupBox_8">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>370</x>
      <y>40</y>
      <width>291</width>
      <height>241</height>

@@ -14,7 +14,8 @@
    <string>Smart Parc</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 56, 56);</string>
+   <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(39, 39, 39);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
@@ -138,7 +139,7 @@ background-color: rgb(239, 64, 54);
 }</string>
     </property>
     <property name="text">
-     <string>GESTION DU PERSONNEL</string>
+     <string>GESTION DES PERSONNELS</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
@@ -270,7 +271,7 @@ background-color: rgb(239, 64, 54);
 }</string>
     </property>
     <property name="text">
-     <string>GESTION DES EVENNEMENT</string>
+     <string>GESTION DES EVENNEMENTS</string>
     </property>
    </widget>
    <zorder>IMG</zorder>

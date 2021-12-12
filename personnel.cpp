@@ -26,6 +26,7 @@ Personnel::Personnel(int CIN, QString NOM, QString PRENOM ,int AGE ,int SALAIRE,
     this->AGE=AGE;
     this->SALAIRE=SALAIRE;
     this->NUM_TEL=NUM_TEL;
+    this->CIN_DIRIGEUR=0;
 }
 
 

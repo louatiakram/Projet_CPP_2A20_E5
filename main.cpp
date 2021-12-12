@@ -15,31 +15,19 @@ int main(int argc, char *argv[])
     login_bd b;
     bool test=b.createconnect1();
     if(test)
-    {l.show();
+    {
+        l.show();
         c.createconnect();
         QMessageBox::information(nullptr, QObject::tr("Database Is Open"),
                     QObject::tr("Connected Successfully !\n"
-                                "Click Cancel to exit."), QMessageBox::Ok);
+                                "Click Ok to exit."), QMessageBox::Ok);
 
-}
+    }
     else
         QMessageBox::critical(nullptr, QObject::tr("Database Is Not Open"),
                     QObject::tr("Connection Failed.\n"
-                                "Click Cancel to exit."), QMessageBox::Ok);
+                                "Click Ok to exit."), QMessageBox::Ok);
 
-/*
-    if(query.next())
-    {
-        QMessageBox::information(nullptr, QObject::tr("DONE"),
-        QObject::tr("Logged In Successfully !"), QMessageBox::Ok);
-        mainwindow = new MainWindow(this);
-        mainwindow->show();
-    }
-    else
-    {
-    QMessageBox::critical(nullptr, QObject::tr("ERROR"),
-    QObject::tr("Login Failed !, Invalid username or password"), QMessageBox::Ok);
-    }*/
     return a.exec();
 }
 
