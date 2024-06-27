@@ -14,4 +14,4 @@ SmartParc includes integration with various Arduino components to enhance functi
 - **LCD Display**: Displays relevant information to users.
 - **Gas Leak Detector**: Ensures safety by detecting potential gas leaks within the park.
 
-Watch the demo video [here](https://youtu.be/I1HUQI1iM10?si=Tt7fjMu5Fv0UYJzF).
+Here is the demo of our application: [SmartParc](https://youtu.be/I1HUQI1iM10?si=Tt7fjMu5Fv0UYJzF).
